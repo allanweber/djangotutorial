@@ -12,6 +12,34 @@ python manage.py runserver
 python manage.py startapp <app_name>
 ```
 
+## Running the migrations
+
+```bash
+python manage.py migrate
+```
+
+## Creating a migration
+
+```bash
+python manage.py makemigration <app_name>
+```
+
+```bash
+#e.g.
+python manage.py makemigration polls
+```
+
+## Checking the migrations SQL
+
+```bash
+python manage.py sqlmigrate <app_name> <migration_number>
+```
+
+```bash
+#e.g.
+python manage.py sqlmigrate polls 0001
+```
+
 ## These files are
 
 * manage.py: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about manage.py in [django-admin and manage.py](https://docs.djangoproject.com/en/5.1/ref/django-admin/).
