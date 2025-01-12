@@ -1,24 +1,26 @@
-# Guide
+# Django
 
-## Running the server
+## Useful Commands
+
+### Running the server
 
 ```bash
 python manage.py runserver
 ```
 
-## Creating a new app
+### Creating a new app
 
 ```bash
 python manage.py startapp <app_name>
 ```
 
-## Running the migrations
+### Running the migrations
 
 ```bash
 python manage.py migrate
 ```
 
-## Creating a migration
+### Creating a migration
 
 ```bash
 python manage.py makemigration <app_name>
@@ -29,7 +31,7 @@ python manage.py makemigration <app_name>
 python manage.py makemigration polls
 ```
 
-## Checking the migrations SQL
+### Checking the migrations SQL
 
 ```bash
 python manage.py sqlmigrate <app_name> <migration_number>
@@ -40,7 +42,30 @@ python manage.py sqlmigrate <app_name> <migration_number>
 python manage.py sqlmigrate polls 0001
 ```
 
-## These files are
+### Running Shell and interacting with the database
+
+```bash
+python manage.py shell
+from <app_name>.models import <model_name>, <model_name>....
+ModelName.objects.all()
+....
+```
+
+## Django Admin
+
+### Creating a superuser
+
+```bash
+python manage.py createsuperuser
+```
+
+### Accessing the admin page
+
+[http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+## About the files
+
+### These files are
 
 * manage.py: A command-line utility that lets you interact with this Django project in various ways. You can read all the details about manage.py in [django-admin and manage.py](https://docs.djangoproject.com/en/5.1/ref/django-admin/).
 * mysite/: A directory that is the actual Python package for your project. Its name is the Python package name you’ll need to use to import anything inside it (e.g. mysite.urls).
